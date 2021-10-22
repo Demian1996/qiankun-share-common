@@ -1,10 +1,15 @@
 const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const { name } = require('../package.json');
 
 module.exports = {
   output: {
     filename: '[name].[hash].js',
     path: path.resolve(__dirname, '../dist'),
+    library: `${name}-[name]`,
+    libraryTarget: 'umd',
+    jsonpFunction: `webpackJsonp_${name}`,
+    globalObject: 'window',
   },
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx'],

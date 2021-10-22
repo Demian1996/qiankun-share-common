@@ -14,13 +14,15 @@ module.exports = smp.wrap(
     mode: 'development',
     devtool: 'inline-source-map',
     devServer: {
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+      },
+      watchContentBase: false,
+      liveReload: false,
       contentBase: path.join(__dirname, '../dist'),
       compress: true,
-      port: 9002,
-      hot: true,
-      historyApiFallback: true,
-      // 开启多机访问
-      // host: '0.0.0.0',
+      port: 9003,
+      hot: false,
     },
     plugins: [
       // 指定构建变量
