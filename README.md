@@ -72,3 +72,7 @@ cd sub/app && npm install && npm run dev
 ### 3、修改 loader
 
 修改 `symlinks` 为 `false` `后，common` 的文件的路径会带上 `node_modules`，因此若 `babel-loader` 之前有配置`exclude: /node_modules/`，则会漏掉对组件的编译。因此，此时需要修改 exclude，改为`/node_modules([\\]+|\/)+(?!common)/`
+
+### 4、watch common
+
+可以充分利用 webpack-dev-server 的配置，将 dev-server 的 hot 设置为 true，或者设置 watch 的相关配置。

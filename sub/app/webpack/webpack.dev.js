@@ -22,7 +22,7 @@ module.exports = smp.wrap(
       contentBase: path.join(__dirname, '../dist'),
       compress: true,
       port: 9003,
-      hot: false,
+      hot: true,
     },
     plugins: [
       // 指定构建变量
