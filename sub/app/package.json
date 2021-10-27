@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "dist/index.js",
   "workspaces": [
-    "../common"
+    "../../common"
   ],
   "dependencies": {
     "antd": "^2.13.14",
